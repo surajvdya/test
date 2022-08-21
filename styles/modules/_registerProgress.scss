@@ -1,0 +1,12 @@
+.register-progress {
+    border-radius: 0;
+    height: 6px;
+    .progress-bar {
+        background-color: #5c5c5c;
+    }
+    &.success{
+        .progress-bar {
+            background-color: #4BA21C;
+        } 
+    }
+}

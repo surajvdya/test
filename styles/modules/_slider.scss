@@ -1,0 +1,108 @@
+.rs-range {
+    margin-top: 29px;
+    width: 100%;
+    -webkit-appearance: none;
+    // overflow: hidden;
+    background: linear-gradient(to right, #82cfd0 0%, #82cfd0 50%, #fff 50%, #fff 100%);
+
+    &:focus {
+        outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        box-shadow: none;
+        background: #ffffff;
+        border-radius: 0px;
+        border: 1px solid #ebebeb;
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+    }
+    &::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+    &::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: #4ba21c;
+        border-radius: 0px;
+        border: 0px solid #010101;
+    }
+
+    &::-webkit-slider-thumb {
+        box-shadow: none;
+        border: 3px solid #e0e0e0;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #4ba21c;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -12px;
+        &:before {
+            content: "";
+            box-shadow: -100px 0 0 1000px #343636;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+    }
+    &::-moz-range-thumb {
+        box-shadow: none;
+        border: 0px solid #ffffff;
+        // box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: -1000px 0 0 1000px #343636;
+        height: 30px;
+        width: 30px;
+        background: #4ba21c;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -12px;
+    }
+    &::-webkit-range-progress {
+        background-color: #43e5f7;
+    }
+    &::-moz-range-progress {
+        background-color: #43e5f7;
+    }
+    &::-moz-focus-outer {
+        border: 0;
+    }
+}
+
+.range-count {
+    display: flex;
+    justify-content: space-between;
+    .count {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: #333333;
+        box-sizing: border-box;
+        padding: 5px 15px;
+        position: relative;
+        &.active {
+            background: $black;
+            color: $white;
+            &:before {
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 8px solid $black;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+}
